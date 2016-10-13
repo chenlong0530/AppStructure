@@ -1,7 +1,8 @@
 package com.app.library.mvp.p;
 
-import library.app.com.applibrary.mvp.m.IModel;
-import library.app.com.applibrary.mvp.v.IView;
+
+import com.app.library.mvp.m.IModel;
+import com.app.library.mvp.v.IView;
 
 /**
  * Created by chenlong on 16/10/12.

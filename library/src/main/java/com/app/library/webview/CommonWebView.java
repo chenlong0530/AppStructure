@@ -22,12 +22,13 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.app.library.lg.Lg;
+
 import java.io.File;
 import java.lang.reflect.Method;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import library.app.com.applibrary.lg.Lg;
 
 
 /**

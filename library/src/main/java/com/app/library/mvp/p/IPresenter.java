@@ -1,6 +1,7 @@
 package com.app.library.mvp.p;
 
-import library.app.com.applibrary.mvp.v.IView;
+
+import com.app.library.mvp.v.IView;
 
 /**
  * Created by chenlong on 16/10/12.
@@ -9,6 +10,5 @@ import library.app.com.applibrary.mvp.v.IView;
 public interface IPresenter<T extends IView> {
     void attachView(T view);
     void detachView();
-
     void start();
 }
