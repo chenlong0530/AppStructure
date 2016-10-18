@@ -1,7 +1,8 @@
-package com.app.library.mvp.p;
+package com.app.library.base;
 
 
 import com.app.library.mvp.m.IModel;
+import com.app.library.mvp.p.IPresenter;
 import com.app.library.mvp.v.IView;
 
 /**

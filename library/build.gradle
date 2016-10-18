@@ -27,5 +27,9 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:support-v13:23.1.1'
     testCompile 'junit:junit:4.12'
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+
 }

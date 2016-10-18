@@ -1,7 +1,7 @@
 package com.app.structure.presenter;
 
 
-import com.app.library.mvp.p.BasePresenter;
+import com.app.library.base.BasePresenter;
 import com.app.structure.contract.MainContract;
 
 /**
