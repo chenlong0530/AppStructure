@@ -24,5 +24,6 @@
             android:theme="@style/AppTheme.NoActionBar.Translucent" />
 
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

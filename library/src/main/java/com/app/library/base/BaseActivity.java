@@ -26,7 +26,7 @@ public abstract class BaseActivity<P extends IPresenter> extends BaseSwipeBackAc
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_base);
-        presenter = getPresenter();
+        presenter = initPresenter();
         presenter.attachView(this);
 
         bodyStub = (ViewStub) findViewById(R.id.body_stub);
@@ -53,10 +53,13 @@ public abstract class BaseActivity<P extends IPresenter> extends BaseSwipeBackAc
         }
     }
 
-    public abstract P getPresenter();
+    public abstract P initPresenter();
 
     public abstract void initView();
 
     public abstract void initListener();
-    
+
+    public P getPresenter(){
+        return presenter;
+    }
 }

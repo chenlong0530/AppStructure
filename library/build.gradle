@@ -32,4 +32,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'me.imid.swipebacklayout.lib:library:1.0.0'
 
+    //OKHTTP
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okio:okio:1.9.0'
+    compile 'com.google.code.gson:gson:2.7'
+
 }

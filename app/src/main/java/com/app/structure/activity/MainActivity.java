@@ -18,7 +18,7 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
     private TextView mTextView;
 
     @Override
-    public MainContract.Presenter getPresenter() {
+    public MainContract.Presenter initPresenter() {
         return new MainPresenter();
     }
 
