@@ -5,5 +5,5 @@ package com.app.library.net;
  */
 
 public interface IRequestCallBack<T> {
-    void onResponse(T response);
+    void onResponse(BaseStatus status, T response);
 }
