@@ -7,12 +7,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.app.library.base.BaseActivity;
+import com.app.library.mvp.BaseMVPActivity;
 import com.app.structure.R;
 import com.app.structure.contract.MainContract;
 import com.app.structure.presenter.MainPresenter;
 
-public class MainActivity extends BaseActivity<MainContract.Presenter> implements MainContract.View{
+public class MainActivity extends BaseMVPActivity<MainContract.Presenter> implements MainContract.View{
 
 
     private TextView mTextView;

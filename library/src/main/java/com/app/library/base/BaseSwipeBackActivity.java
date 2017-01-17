@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.app.library.mvp.IAssistView;
+
 import me.imid.swipebacklayout.lib.SwipeBackLayout;
 import me.imid.swipebacklayout.lib.Utils;
 import me.imid.swipebacklayout.lib.app.SwipeBackActivityHelper;
@@ -12,7 +14,7 @@ import me.imid.swipebacklayout.lib.app.SwipeBackActivityHelper;
  * Created by chenlong on 16/10/14.
  */
 
-public class BaseSwipeBackActivity extends AppCompatActivity implements ISwipeBack{
+public class BaseSwipeBackActivity extends AppCompatActivity implements ISwipeBack,IAssistView {
     private SwipeBackActivityHelper mHelper;//右滑删除Activity帮助类
 
     @Override
@@ -43,5 +45,20 @@ public class BaseSwipeBackActivity extends AppCompatActivity implements ISwipeBa
     public void scrollToFinishActivity() {
         Utils.convertActivityToTranslucent(this);//将当前类转换为半透明效果（精髓所在）
         getSwipeBackLayout().scrollToFinishActivity();//关闭当前activity
+    }
+
+    @Override
+    public void showToast(String msg) {
+
+    }
+
+    @Override
+    public void showLoadingBar() {
+
+    }
+
+    @Override
+    public void dismissLoadingBar() {
+
     }
 }

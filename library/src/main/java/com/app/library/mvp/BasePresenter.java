@@ -1,9 +1,5 @@
-package com.app.library.base;
+package com.app.library.mvp;
 
-
-import com.app.library.mvp.IModel;
-import com.app.library.mvp.IPresenter;
-import com.app.library.mvp.IView;
 
 /**
  * Created by chenlong on 16/10/12.
@@ -14,6 +10,9 @@ public abstract class BasePresenter<T extends IView, M extends IModel> implement
     private T mView;
     private M mModel;
 
+    //显示对话框，toast接口
+    private IAssistView mAssistView;
+
     public abstract M initModel();
 
     public BasePresenter() {
@@ -21,8 +20,9 @@ public abstract class BasePresenter<T extends IView, M extends IModel> implement
     }
 
     @Override
-    public void attachView(T view) {
-        mView = view;
+    public void attachView(T view, IAssistView assistView) {
+        this.mView = view;
+        this.mAssistView = assistView;
     }
 
     @Override

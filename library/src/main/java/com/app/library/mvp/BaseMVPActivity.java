@@ -1,19 +1,18 @@
-package com.app.library.base;
+package com.app.library.mvp;
 
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewStub;
 
 import com.app.library.R;
-import com.app.library.mvp.IPresenter;
-import com.app.library.mvp.IView;
+import com.app.library.base.BaseSwipeBackActivity;
 
 
 /**
  * Created by chenlong on 16/10/12.
  */
 
-public abstract class BaseActivity<P extends IPresenter> extends BaseSwipeBackActivity implements IView {
+public abstract class BaseMVPActivity<P extends IPresenter> extends BaseSwipeBackActivity implements IView {
 
 
     protected P presenter;
@@ -25,10 +24,8 @@ public abstract class BaseActivity<P extends IPresenter> extends BaseSwipeBackAc
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_base);
         presenter = initPresenter();
-        presenter.attachView(this);
-
+        presenter.attachView(this,this);
         bodyStub = (ViewStub) findViewById(R.id.body_stub);
-
     }
 
     @Override
@@ -60,4 +57,6 @@ public abstract class BaseActivity<P extends IPresenter> extends BaseSwipeBackAc
     public P getPresenter(){
         return presenter;
     }
+
+
 }
