@@ -1,14 +1,12 @@
 package com.app.library.base;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewStub;
 
 import com.app.library.R;
-import com.app.library.mvp.p.IPresenter;
-import com.app.library.mvp.v.IView;
+import com.app.library.mvp.IPresenter;
+import com.app.library.mvp.IView;
 
 
 /**

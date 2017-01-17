@@ -1,7 +1,7 @@
-package com.app.library.mvp.p;
+package com.app.library.mvp;
 
 
-import com.app.library.mvp.v.IView;
+import com.app.library.mvp.IView;
 
 /**
  * Created by chenlong on 16/10/12.
