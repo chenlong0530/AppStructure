@@ -16,8 +16,6 @@ public interface IWebView {
 
     void loadUrl(String url);
 
-    void postRunable(Runnable r);
-
     void setTitle(String title);
 
     boolean isShowTitle();
@@ -28,34 +26,4 @@ public interface IWebView {
 
     void hideCustomView();
 
-
-    void displayShareComp(String title, String shareUrl);
-
-    void goToRegisterPage(String param);
-
-    void wxShare(String param, String callId);
-
-    void alertLocationSetting();
-
-    void appShare(String param, String callId);
-
-    void loading(String param);
-
-    void hideLoading(String param);
-
-    void showDfpService(String param);
-
-    void setHeaderRightResource(int type);
-
-    void setVpnType(String vpnType);
-
-    void loginSuccess();
-
-    void loginFail(String reason);
-
-    void showToast(String message);
-
-    void fullScreen(String param, String callId);
-
-    void channelAppShare(String param, String callId);
 }

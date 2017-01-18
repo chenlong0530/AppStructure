@@ -30,12 +30,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-
 /**
  * Created by chenlong on 16/5/11.
  */
 public class CommonWebView extends WebView {
-    private JsInterface jsInterface;
+    private IJs jsInterface;
     private IWebView viewListener;
     private WebView webView;
     private String jsPromptUrl;
@@ -52,6 +51,7 @@ public class CommonWebView extends WebView {
 
     protected void initWebView() {
         webView = this;
+        jsInterface = new JsImp();
         setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         try {
             removeJavascriptInterface("searchBoxJavaBridge_");
@@ -96,7 +96,6 @@ public class CommonWebView extends WebView {
     public Activity getActivity() {
         return activity;
     }
-
 
 
     private class MyDownloadListener implements DownloadListener {
@@ -192,8 +191,9 @@ public class CommonWebView extends WebView {
 
     class MyWebChromeClient extends WebChromeClient {
 
-        // 新协议后带有CALLID字段
-        private static final String NEW_PATTERN = "PAWIFI\\|METHOD=(.+?)\\|PARAM=(.*)" + "\\|CALLID=(.*)";
+        //H5传给native数据协议后带有CALLID字段
+        //H5传给native数据协议后带有CALLID字段
+        private static final String PATTERN = "PAWIFI\\|METHOD=(.+?)\\|PARAM=(.*)" + "\\|CALLID=(.*)";
 
         @Override
         public void onShowCustomView(View view, CustomViewCallback callback) {
@@ -229,7 +229,7 @@ public class CommonWebView extends WebView {
                 // message内带有CALLID表示是新协议，匹配新规则，没有则表示旧协议，匹配旧规则
                 Pattern p = null;
                 if (message.contains("CALLID")) {
-                    p = Pattern.compile(NEW_PATTERN);
+                    p = Pattern.compile(PATTERN);
                 }
                 Matcher m = p.matcher(message);
                 boolean r = m.find();
