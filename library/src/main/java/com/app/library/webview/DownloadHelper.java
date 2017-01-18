@@ -12,12 +12,8 @@ import com.app.library.lg.Lg;
 import java.io.File;
 
 
-
 /**
  * 下载助手
- * 
- * @author EX-YANGZHIHONG001 E-mail:EX-YANGZHIHONG001@pingan.com.cn
- * @version 1.1.0
  */
 public class DownloadHelper {
 

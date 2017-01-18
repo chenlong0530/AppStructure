@@ -23,10 +23,10 @@ import java.util.Date;
  */
 public class WriteLogger {
 
-    private static final String TAG = "WifiSdk";
+    private static final String TAG = "Structure";
 
-    private static String MYLOG_PATH_SDCARD_DIR = "/Wifilog/";// 日志文件在sdcard中的路径
-    private static String LOG_NAME = "WiFiAPP.txt";// 本类输出的日志文件名称
+    private static String MYLOG_PATH_SDCARD_DIR = "/StructureLog/";// 日志文件在sdcard中的路径
+    private static String LOG_NAME = "StructureLog.txt";// 本类输出的日志文件名称
 
     private static WriteLogger instance;
     private HandlerThread looperThread;

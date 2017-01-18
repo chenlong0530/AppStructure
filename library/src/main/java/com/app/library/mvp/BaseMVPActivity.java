@@ -14,7 +14,6 @@ import com.app.library.base.BaseSwipeBackActivity;
 
 public abstract class BaseMVPActivity<P extends IPresenter> extends BaseSwipeBackActivity implements IView {
 
-
     protected P presenter;
     private ViewStub bodyStub;
     private View bodyView;
@@ -24,7 +23,7 @@ public abstract class BaseMVPActivity<P extends IPresenter> extends BaseSwipeBac
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_base);
         presenter = initPresenter();
-        presenter.attachView(this,this);
+        presenter.attachView(this, this);
         bodyStub = (ViewStub) findViewById(R.id.body_stub);
     }
 
@@ -54,7 +53,7 @@ public abstract class BaseMVPActivity<P extends IPresenter> extends BaseSwipeBac
 
     public abstract void initListener();
 
-    public P getPresenter(){
+    public P getPresenter() {
         return presenter;
     }
 
